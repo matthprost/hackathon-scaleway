@@ -1,0 +1,7 @@
+{
+  "name": "app-example-vue",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}

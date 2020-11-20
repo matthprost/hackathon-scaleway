@@ -1,0 +1,38 @@
+- hosts: all
+  gather_facts: no
+  vars:
+    ansible_user: root
+    ansible_host_key_checking: false
+  tasks:
+    - name: Wait for target connection to become reachable/usable
+      wait_for_connection:
+    - name: Add node apt sources
+      shell: curl -sL https://deb.nodesource.com/setup_15.x | bash -
+
+    - name: Install nodejs
+      apt:
+        name: nodejs
+
+    - name: Create /app directory
+      file:
+        path: /app
+        state: directory
+
+    - name: Copy index.js file
+      copy:
+        src: index.js
+        dest: /app
+
+    - name: Copy service file
+      copy:
+        src: api.service
+        dest: /etc/systemd/system/
+
+    - name: Force systemd to reread configs
+      systemd:
+        daemon_reload: yes
+
+    - name: Start api service
+      systemd:
+        state: started
+        name: api

@@ -1,0 +1,11 @@
+[Unit]
+Description=My super API
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/node /app/index.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

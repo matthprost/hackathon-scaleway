@@ -2,7 +2,7 @@
 
 ### Welcome to this hackathon !
 
-Here you will find all basic files to create your API using Scaleway servers and a simple mobile application with IONIC.
+Here you will find files to start with your API using Scaleway servers and a simple mobile application with IONIC.
 
 The repository is structured as follow:
 

@@ -85,7 +85,7 @@ For Android build:
 
 3. Finally run `ionic serve`, a new window will open with the application
 
-### Start on iOS
+### Build on iOS
 
 1. Run `ionic build`
 
@@ -93,7 +93,7 @@ For Android build:
 
 3. Xcode should open with the app, you can now launch it on a simulator / your own device
 
-### Start on Android
+### Build on Android
 
 1. Run `ionic build`
 
